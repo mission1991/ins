@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title%} Delete {% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="alert alert-danger">Do you want to delete?</div>
+            <form action="" method="post">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-info" value="Delete">
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+{% endblock %}
